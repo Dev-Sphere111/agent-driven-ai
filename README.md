@@ -1,25 +1,28 @@
-# ANK-AI: Agent-driven Navigation & Knowledge – Artificial Intelligence
+# agent-driven-ai: Intelligent Navigation & Knowledge – Artificial Intelligence
 
-A fullstack project to build a **team of AI agents** that can answer user queries about:
-- Career growth
-- Projects and technology
-- Business services
-- Research and industry trends  
-using a **Flask backend** with **Groq LLMs** and a **React.js frontend** with chat interfaces.
+A comprehensive fullstack initiative to construct a **collective of AI agents** capable of addressing user inquiries concerning:
+
+- Professional development
+- Initiatives and technological advancements
+- Corporate services
+- Investigative studies and market tendencies
+  utilizing a **Flask-based backend** with **Groq LLMs** and a **React.js frontend** featuring chat interfaces.
 
 ---
 
-## Tech Stack
+## Technology Stack
 
-**Backend**:
+**Server-side**:
+
 - Python
 - Flask
-- Agno (Agent Management)
-- Groq (LLM Inference API)
+- Agno (Agent Orchestration)
+- Groq (LLM Processing API)
 - Python-dotenv
 - CORS Middleware
 
-**Frontend**:
+**Client-side**:
+
 - React.js (Vite)
 - Tailwind CSS
 - Axios
@@ -27,7 +30,7 @@ using a **Flask backend** with **Groq LLMs** and a **React.js frontend** with ch
 
 ---
 
-## Project Structure
+## Project Layout
 
 ```
 ├── agents
@@ -80,18 +83,18 @@ using a **Flask backend** with **Groq LLMs** and a **React.js frontend** with ch
 
 ---
 
-## Setup Instructions
+## Configuration Guidelines
 
-### 1. Clone the Repository
+### 1. Clone the Source Code
 
 ```bash
-git clone https://github.com/ankitpakhale/ANK-AI.git
-cd ANK-AI
+git clone https://github.com/Dev-Sphere111/agent-driven-ai.git
+cd agent-driven-ai
 ```
 
 ---
 
-### 2. Backend Setup (Flask + Groq + Agno)
+### 2. Backend Configuration (Flask + Groq + Agno)
 
 ```bash
 cd backend
@@ -101,24 +104,24 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside `backend/`:
+Generate a `.env` file within `backend/`:
 
 ```env
 GROQ_API_KEY=your-groq-api-key
 ```
 
-Run the backend server:
+Execute the backend server:
 
 ```bash
 python main.py
 ```
 
-Backend will run on:  
+The backend will be accessible at:
 `http://localhost:8000`
 
 ---
 
-### 3. Frontend Setup (React + Tailwind)
+### 3. Frontend Configuration (React + Tailwind)
 
 ```bash
 cd frontend
@@ -126,95 +129,95 @@ npm install
 npm run dev
 ```
 
-Frontend will run on:  
+The frontend will be accessible at:
 `http://localhost:5173`
 
 ---
 
-## API Endpoints
+## API Interfaces
 
-| Endpoint         | Agent Type          | Description                           |
-|------------------|----------------------|---------------------------------------|
-| `/api/welcome`   | WelcomeAgent         | Greet user and suggest next steps     |
-| `/api/project`   | ProjectAgent         | Handle project and technology queries|
-| `/api/career`    | CareerAgent          | Help users with skills, job fit, etc. |
-| `/api/client`    | ClientAgent          | Business services and client queries |
-| `/api/research`  | ResearchAgent        | Industry trends, comparison research |
-
----
-
-## Usage Examples (cURL)
-
-Welcome:
-
-```bash
-curl -X POST http://localhost:8000/api/welcome -H "Content-Type: application/json" -d '{"prompt": "Hi"}'
-```
-
-Project Inquiry:
-
-```bash
-curl -X POST http://localhost:8000/api/project -H "Content-Type: application/json" -d '{"prompt": "Tell me about your latest projects"}'
-```
-
-Career Inquiry:
-
-```bash
-curl -X POST http://localhost:8000/api/career -H "Content-Type: application/json" -d '{"prompt": "What skills should I learn for a full-stack role?"}'
-```
-
-Client Services:
-
-```bash
-curl -X POST http://localhost:8000/api/client -H "Content-Type: application/json" -d '{"prompt": "How do you work with clients?"}'
-```
-
-Research:
-
-```bash
-curl -X POST http://localhost:8000/api/research -H "Content-Type: application/json" -d '{"prompt": "Compare React and Vue"}'
-```
+| Endpoint        | Agent Category | Purpose                                          |
+| --------------- | -------------- | ------------------------------------------------ |
+| `/api/welcome`  | WelcomeAgent   | Greets the user and suggests orientations        |
+| `/api/project`  | ProjectAgent   | Manages project and technology questions         |
+| `/api/career`   | CareerAgent    | Assists users with skills, job suitability, etc. |
+| `/api/client`   | ClientAgent    | Addresses business services and client questions |
+| `/api/research` | ResearchAgent  | Provides industry trends, comparative analysis   |
 
 ---
 
-## Frontend Features
+## Usage Illustrations (cURL)
 
-- Dynamic Chat interface with auto-scroll and typing animation
-- Separate pages for:
+Welcome Interaction:
+
+```bash
+curl -X POST http://localhost:8000/api/welcome -H "Content-Type: application/json" -d '{"prompt": "Hello"}'
+```
+
+Project Question:
+
+```bash
+curl -X POST http://localhost:8000/api/project -H "Content-Type: application/json" -d '{"prompt": "Inform me about your recent initiatives"}'
+```
+
+Career Question:
+
+```bash
+curl -X POST http://localhost:8000/api/career -H "Content-Type: application/json" -d '{"prompt": "Which abilities should I acquire for a full-stack position?"}'
+```
+
+Client Services Interaction:
+
+```bash
+curl -X POST http://localhost:8000/api/client -H "Content-Type: application/json" -d '{"prompt": "What is your approach to client collaboration?"}'
+```
+
+Research Inquiry:
+
+```bash
+curl -X POST http://localhost:8000/api/research -H "Content-Type: application/json" -d '{"prompt": "Distinguish between React and Vue"}'
+```
+
+---
+
+## Frontend Capabilities
+
+- Interactive chat display with automatic scrolling and typing effects
+- Distinct sections for:
   - Home
   - Projects
   - Career
   - Services
   - Research
   - Contact
-- Mobile Responsive Layout
-- Axios integration with Flask APIs
-- Styled with Tailwind CSS for a modern UI
+- Responsive design for mobile devices
+- Axios for communication with Flask APIs
+- Styled using Tailwind CSS for a contemporary user interface
 
 ---
 
-## Deployment
+## Deployment Process
 
-- Build production frontend:
+- Create production-ready frontend:
 
 ```bash
 cd frontend
 npm run build
 ```
 
-- Deploy `frontend/dist` and `backend` using services like:
+- Deploy `frontend/dist` and `backend` through platforms such as:
   - Render
-  - Vercel (frontend) + Railway (backend)
+  - Vercel (for frontend) + Railway (for backend)
   - AWS EC2
   - DigitalOcean
 
-(You may need to adjust CORS and API URLs for production.)
+(Adjustments to CORS and API URLs might be necessary for a production environment.)
 
 ---
 
 ## Environment Variables
 
-For backend (`backend/.env`):
+For the backend (`backend/.env`):
 
 ```
 GROQ_API_KEY=<your_groq_key>
@@ -222,13 +225,11 @@ GROQ_API_KEY=<your_groq_key>
 
 ---
 
-## Future Improvements
+## Future Enhancements
 
-- Add Authentication for personalized agent responses
-- Add more agents dynamically
-- Use Websockets for real-time chat experience
-- Improve mobile optimization
+- Implement Authentication for customized agent interactions
+- Dynamically introduce additional agents
+- Employ Websockets for an instantaneous chat experience
+- Refine mobile responsiveness
 
 ---
-
-✅ **Project complete and production-ready!**
